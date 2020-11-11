@@ -35,7 +35,7 @@ export class BrandController implements ICrud {
             res.status(402).json({message: "Not Valid Data"})
         }
     }
- 
+
     async readAll(req: Request, res: Response) {
         try {
             let brands = await Brand.find({}).populate('branches')
@@ -53,6 +53,6 @@ export class BrandController implements ICrud {
         } catch (error) {
             res.status(404).json({message: "Not Found"})
         }
-        
+
     }
 }

@@ -1,6 +1,6 @@
 import { Document, Model, model, Schema } from "mongoose";
 import {Ibrand} from "./brand"
-import AdminRole from "./adminRole"
+// import AdminRole from "./adminRole"
 
 export interface Iadmin extends Document {
     brandId: Ibrand['_id'];
