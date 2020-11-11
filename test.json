@@ -1,0 +1,98 @@
+{ 
+    "id": 4,
+    "user_id": 2,
+    "place_id": 3,
+    "start": "2017-06-10T09:29:23.000Z",
+    "end": "2017-06-10T10:42:08.000Z",
+    "session_id": "311b7f196a9d039b",
+    "nasipaddress": "192.168.182.1",
+    "calledstationid": "Cid_Brandid_",
+    "session_duration": 4365,
+    "rating": 0,
+    "feedback": "",
+    "reply": "",
+    "reply_owner_id": 0,
+    "download_bytes": 7190100,
+    "upload_bytes": 49187000,
+    "barnd_id": "",
+    "branch_id": "",
+    "access_id": ""
+  },
+branch {
+  ID : ""
+  Name: ""
+  brandId : ""
+  package : 
+}
+brand{
+  ID; ""
+  Name: ""
+  Package :
+  ownerId :""
+  isDeleted : ""
+}
+package:{
+  SMS: 10000,
+  MAIL: 100000,
+  Notitificaiton: 10000
+}
+
+Company {
+  id 
+  name
+  package
+  create  
+  update
+}
+User {
+  id 
+  name 
+  image
+  Owner owneID
+  username 
+  password 
+  roleid 
+}
+role {
+  id 
+  scope  brand, brach , full access 
+  expired date
+
+}
+
+companyname_visitors{
+  { id: 6,
+    image: null,
+    email: 'ahmed.nasrat@hotmail.com',
+    mobile: '201227140625',
+    country_code: '20',
+    first_name: 'Ahmed',
+    last_name: 'Nasrat',
+    age: 1991-06-11T00:00:00.000Z,
+    address: null,
+    fb_profile: null,
+    gender: 'male',
+    likes: null,
+    display_name: null,
+    password: '25f9e794323b453885f5181f1b624d0b',
+    ver_code: '573481',
+    verified: 1,
+    facebook_id: null,
+    google_id: null,
+    twitter_id: null,
+    instagram_id: null,
+    tripadvisor_id: null,
+    fb_access_token: null,
+    tw_access_token: null,
+    tw_access_token_secret: null,
+    g_access_token: null,
+    fsq_token: null,
+    deleted: 0,
+    remember_me: 'WOMu67nD2m9FXBrR',
+    random_code: null } 
+} 
+
+
+
+
+        
