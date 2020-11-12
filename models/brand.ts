@@ -21,6 +21,7 @@ export interface Ibrand extends Document {
     isDeleted: boolean
     loginType: string;
 
+
 }
 
 const brandSchema: Schema = new Schema({
@@ -109,8 +110,13 @@ const brandSchema: Schema = new Schema({
         },
         notificationCount:{
             type: Schema.Types.Number
-        }
-    }
+        },
+
+    },
+    packages:[{
+        type: Schema.Types.ObjectId,
+        ref: "Package"
+    }]
 })
 
 const Brand: Model<Ibrand> = model("Brand", brandSchema);

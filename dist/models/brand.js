@@ -87,8 +87,12 @@ const brandSchema = new mongoose_1.Schema({
         },
         notificationCount: {
             type: mongoose_1.Schema.Types.Number
-        }
-    }
+        },
+    },
+    packages: [{
+            type: mongoose_1.Schema.Types.ObjectId,
+            ref: "Package"
+        }]
 });
 const Brand = mongoose_1.model("Brand", brandSchema);
 exports.default = Brand;

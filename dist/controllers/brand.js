@@ -20,9 +20,10 @@ class BrandController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                req.body.loginType = 'OWNER';
+                // req.body.loginType = 'OWNER'
                 let validation = validator_1.ValidateBrand(req.body);
                 if (validation.error) {
+                    res.json(validation.error);
                     res.status(402).json({ message: "Not Valid Data" });
                     return;
                 }
@@ -70,6 +71,19 @@ class BrandController {
             }
             catch (error) {
                 res.status(404).json({ message: "Not Found" });
+            }
+        });
+    }
+    buyPackage(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let brans = yield brand_1.default.findById(req.params['id']).populate('Package')
+                    .then(result => {
+                    res.json(result);
+                });
+            }
+            catch (error) {
+                res.json(error);
             }
         });
     }

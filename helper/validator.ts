@@ -18,22 +18,15 @@ export  function ValidateBrand(brand: any){
 }
 
 const packageScema = Joi.object({
-  email: Joi.string()
-  .email({ minDomainSegments: 2 }),
-  sms: Joi.string()
-        .min(3)
-        .max(30),
-  notification: Joi.string()
-        .min(3)
-        .max(30),
+  emailCount: Joi.number(),
+  smsCount: Joi.number(),
+  notificationCount: Joi.number(),
   name: Joi.string()
         .alphanum()
         .min(3)
         .max(30),
   expireTime: Joi.number(),
   currency: Joi.string(),
-  createdAt: Joi.boolean(),
-  updatedAt: Joi.boolean(),
   price: Joi.number()
         .min(1)
 

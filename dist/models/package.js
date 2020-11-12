@@ -2,16 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const packageScema = new mongoose_1.Schema({
-    sms: {
-        type: String,
+    smsCount: {
+        type: Number,
         required: true
     },
-    notification: {
-        type: String,
+    notificationCount: {
+        type: Number,
         required: true
     },
-    email: {
-        type: String,
+    emailCount: {
+        type: Number,
         unique: true,
         required: true
     },
@@ -31,10 +31,12 @@ const packageScema = new mongoose_1.Schema({
         required: true
     },
     createdAt: {
-        type: Boolean,
+        type: Date,
+        default: Date.now
     },
     updatedAt: {
-        type: Boolean,
+        type: Date,
+        default: Date.now
     }
 });
 const Package = mongoose_1.model("Package", packageScema);

@@ -1,31 +1,33 @@
+import { number } from "joi";
 import { Document, Model, model, Schema } from "mongoose";
+import { type } from "os";
 
 
 export interface Ipackage extends Document {
-    sms: string;
-    notification: string;
-    email: string;
+    smsCount: number;
+    notificationCount: number;
+    emailCount: number;
     name: string;
     expireTime: number;
     price: number
     currency: string;
-    createdAt : boolean;
-    updatedAt : boolean;
+    createdAt : Date;
+    updatedAt : Date;
 
 
 }
 
 const packageScema: Schema = new Schema({
-    sms: {
-        type: String,
+  smsCount: {
+        type: Number,
         required: true
     },
-    notification: {
-        type: String,
+    notificationCount: {
+        type: Number,
         required: true
     },
-    email: {
-        type: String,
+    emailCount: {
+        type: Number,
         unique: true,
         required: true
     },
@@ -45,10 +47,12 @@ const packageScema: Schema = new Schema({
         required: true
     },
     createdAt: {
-        type: Boolean,
+        type: Date,
+        default: Date.now
     },
     updatedAt: {
-        type: Boolean,
+        type: Date,
+        default: Date.now
 
     }
 });

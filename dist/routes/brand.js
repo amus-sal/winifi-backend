@@ -8,6 +8,7 @@ router.get("/list", brandController.readAll);
 router.post("/create", brandController.create);
 router.put("/:id", brandController.update);
 router.get("/:id", brandController.read);
+router.get("/buy/:id", brandController.buyPackage);
 // router.delete("/:id",brandController.delete);
 exports.default = router;
 //# sourceMappingURL=brand.js.map

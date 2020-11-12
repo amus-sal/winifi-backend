@@ -21,22 +21,15 @@ function ValidateBrand(brand) {
 }
 exports.ValidateBrand = ValidateBrand;
 const packageScema = joi_1.default.object({
-    email: joi_1.default.string()
-        .email({ minDomainSegments: 2 }),
-    sms: joi_1.default.string()
-        .min(3)
-        .max(30),
-    notification: joi_1.default.string()
-        .min(3)
-        .max(30),
+    emailCount: joi_1.default.number(),
+    smsCount: joi_1.default.number(),
+    notificationCount: joi_1.default.number(),
     name: joi_1.default.string()
         .alphanum()
         .min(3)
         .max(30),
     expireTime: joi_1.default.number(),
     currency: joi_1.default.string(),
-    createdAt: joi_1.default.boolean(),
-    updatedAt: joi_1.default.boolean(),
     price: joi_1.default.number()
         .min(1)
 });
